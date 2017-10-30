@@ -1,0 +1,8 @@
+node_modules/
+static/css/*
+!static/css/lib
+
+public/
+themes/
+
+.DS_Store
