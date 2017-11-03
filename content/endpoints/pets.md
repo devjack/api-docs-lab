@@ -24,16 +24,25 @@ resource:
   type: object
   properties:
     id:
+      type: string
       format: uuid
       example: "d2014f64-ffdf-487b-8d12-67a20976aca6"
     name:
       type: string
+      description: This is the name of the pet.
     tag:
       type: string
-    Uri:
+    owner:
+      type: object
+      description: Who owns this pet.
+      properties:
+        name:
+          type: string
+          description: The name of the owner
+    uri:
       type: string
       x-guide: hypermedia
-      example: "{cf_uri}/:id"
+      example: "[{domain}](/guides/hypermedia)/pets/:id"
 ---
 
 The Pet endpoint allows you to create, retrieve and update pet resources.
